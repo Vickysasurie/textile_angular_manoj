@@ -1,0 +1,60 @@
+<div >
+  <h1 style="text-align: center">Shop Details</h1>
+        <form  > 
+            <table align="center">
+     
+  
+  
+       <tr>
+         <td > 
+  
+  
+    <label>Shop name:</label></td>
+    <td >
+    <input type="text" required placeholder="Enter shop name" [(ngModel)]="shop.shopname" [ngModelOptions]="{standalone: true}"></td>
+     </tr><br>
+     <tr>
+       <td> 
+    <label>Contact number:</label></td>
+    <td ><input type="number" required placeholder="Enter Contact No" [(ngModel)]="shop.contactno" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+   </tr>
+   <tr>
+    <td ><label>Address:</label></td>
+    <td >
+    <input type="text" required placeholder="Enter the Address" [(ngModel)]="shop.address" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+   </tr>
+   <tr>
+   <td><label>Lattitude:</label></td>
+    <td><input type="number" required placeholder="Enter Latitude" [(ngModel)]="shop.latitude" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+    </tr>
+    <tr>
+      <td>
+        <label>Longitude:</label></td>
+    <td><input type="number" required placeholder="Enter Longitude" [(ngModel)]="shop.longitude" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+    </tr>
+    <tr>
+      <td>
+    <label>Email:</label></td>
+    <td><input type="text" required placeholder="Enter email id" [(ngModel)]="shop.email" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+    </tr>
+    <tr>
+      <td>
+    <label>LOGO_Image:</label></td>
+    <td><input type="text" required placeholder="URL" [(ngModel)]="shop.url" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+    </tr>
+    <tr>
+    <td><label>Shop_Image:</label></td>
+    <td>
+  <input type="text" required placeholder="URL" [(ngModel)]="shop.url1" [ngModelOptions]="{standalone: true}"><br /><br /></td> 
+   </tr>
+  </table><br>
+  <p style="text-align: center">
+  <input class="button" type="button" (click)="update()" value="update"><br><br><br>
+    
+    
+  </p> 
+  
+  </form>
+  </div>
+  
+

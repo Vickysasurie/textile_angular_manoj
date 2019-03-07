@@ -1,0 +1,208 @@
+<section class="container py-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Product</h2>
+                <ul id="tabsJustified" class="nav nav-tabs">
+                    <li class="nav-item"><a href="" data-target="#add" data-toggle="tab" class="nav-link small text-uppercase active">Add</a></li>
+                    <li class="nav-item"><a href="" data-target="#update" data-toggle="tab" class="nav-link small text-uppercase ">Update</a></li>
+                    <li class="nav-item"><a href="" data-target="#delete" data-toggle="tab" class="nav-link small text-uppercase ">Delete</a></li>
+                    <li class="nav-item"><a href="" data-target="#view" data-toggle="tab" class="nav-link small text-uppercase ">View</a></li>
+                </ul>
+                <br>
+                <div id="tabsJustifiedContent" class="tab-content">
+                    <div id="add" class="tab-pane fade active show">
+                            <body class="image">
+                                    <!-- <div style="background-image: url(../../assets/1.jpg.jpg)"> -->
+                                    <h1 style="text-align: center;"> PRODUCT DETAILS</h1>
+                                    
+                                    
+                                    
+                                      
+                                       <div class="container">       
+                                    
+                                            <table align="center"    >
+                                      <br>
+                                                <tr>
+                                                 <td>Product Name :</td> <td><input type="text"required [(ngModel)]="providerDetails.name" [ngModelOptions]="{standalone: true}"> </td><br>
+                                                </tr>
+                                                <tr>
+                                                 <td>Image :</td> <td><input type="file" required [(ngModel)]="providerDetails.img" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                <tr>
+                                                 <td>Product Category :  </td>
+                                                 <td>
+                                                <select name="category" required [(ngModel)]="providerDetails.prodCategory">
+                                                    <option value="mens">Mens</option>
+                                                    <option value="womens">Womens</option>
+                                                    <option value="childrens">Childrens</option>
+                                                    
+                                                  </select>
+                                                </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>Shop Category :</td>
+                                                        <td>
+                                                                <select name="category" required [(ngModel)]="providerDetails.shopCategory">
+                                                                    <option value="textile">Textile</option>
+                                                                    <option value="Sports">Sports</option>
+                                                                    <option value="gifts">Gifts</option>
+                                                                    
+                                                                  </select>
+                                                                </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Select Shop :</td>
+                                                                      <td>
+                                                                              <select name="categor" required [(ngModel)]="providerDetails.shopName">
+                                                                                  <option value="siva">Siva Textile</option>
+                                                                                  <option value="chennai">Chennai Textile</option>
+                                                                                </select>
+                                                                              </td>
+                                                                              </tr>
+                                                     
+                                                <tr>
+                                                 <td>Short Description:</td> <td><input type="text"  required [(ngModel)]="providerDetails.shortDesc" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                <tr>
+                                                 <td>Long Description:</td> <td><input type="text"  required [(ngModel)]="providerDetails.longDesc" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                <tr>
+                                                 <td>Size :</td> <td><input type="text" required [(ngModel)]="providerDetails.size" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                <tr>
+                                                <td>Ratings :</td> <td><input type="number"  required [(ngModel)]="providerDetails.rating" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                <tr>
+                                                 <td>Discount :</td> <td><input type="text" required [(ngModel)]="providerDetails.discount" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                <tr>
+                                                 <td>Brand Name :</td> <td><input type="text" required [(ngModel)]="providerDetails.brandName" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                <tr>
+                                                 <td>Sku :</td> <td><input type="text" required [(ngModel)]="providerDetails.sku" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td>Price :</td> <td><input type="text" required [(ngModel)]="providerDetails.price" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                <tr>
+                                                    <td>Quantity :</td> <td><input type="text" required [(ngModel)]="providerDetails.available" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>            
+                                                <tr>
+                                                 <td>Tax :</td> <td><input type="text" required [(ngModel)]="providerDetails.tax" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                 <tr>
+                                                    <td>Product Id :</td> <td><input type="text" required [(ngModel)]="providerDetails.prodId" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr>
+                                                <!-->
+                                                <tr>
+                                                    <td>UpdatedAt :</td> <td><input type="text" required [(ngModel)]="providerDetails.updatedAt" [ngModelOptions]="{standalone: true}"></td><br>
+                                                </tr> -->
+                                                
+                                               </table>
+                                               <div style="text-align: center" >
+                                               <input type="submit" value="Submit" (click)="save()" style="box-align:center;">
+                                               </div>
+                                            </div>
+                                        </body>
+                                    <!-- </div> -->
+                                     
+                    </div>
+                    <div id="update" class="tab-pane fade ">
+                        
+                                    <div class="image">
+                                            <h1 style="text-align: center">Update Product</h1>
+                                            
+                                              <div class="box"> 
+                                              <div class="container-1"> 
+                                                <input type="search" id="search" placeholder="Search..." [(ngModel)]="searchText"> 
+                                              </div> 
+                                            </div>
+                                              <br>
+                                              <br>
+                                              <br>
+                                              <br>
+                                              <div style="text-align: center">
+                                              <button  *ngFor="let ld of this.result | filter:searchText" style="width: 50vw;margin-bottom: 10px" ><a routerLink="/upload/{{ld.id}}">
+                                                {{ld.brandName}}&nbsp;&nbsp;&nbsp;&nbsp;{{ld.name}}</a>
+                                                <br>
+                                              </button>
+                                              </div>
+                                              <br>
+                                         
+                           
+                        </div>
+                    </div>
+                    <div id="delete" class="tab-pane fade">
+                            <div class="image">
+                                    <h1 style="text-align: center">Delete Product</h1>
+                                    </div> 
+                                    <div class="box"> 
+                                      <div class="container-1"> 
+                                        <input type="search" id="search" placeholder="Search..." [(ngModel)]="searchText"> 
+                                      </div> 
+                                    </div>
+                                    <!--<input align="middle" type="search"  placeholder="type here to search" >-->
+                                    
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                  
+                                   <div style="text-align: center;">
+                                    <button  *ngFor="let ld of result | filter:searchText"  style=" width: 50vw;margin-bottom: 10px" (click)="clickMethod(ld)">
+                                      {{ld.brandName}}&nbsp;&nbsp;&nbsp;&nbsp;{{ld.name}}
+                                      
+                                    </button>
+                                    </div>
+                                    
+                                    <br>
+                                    
+                                    </div>
+                    <div id="view" class="tab-pane fade">
+                        <table  style="width:90%" class="table table-bordered">
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Image</th>
+                                <th>Product Category</th>
+                                <th>Shop Category</th>
+                                <th> Shop Name </th>
+                                <th>Long Description</th>
+                                <th>Short Description</th>
+                                <th>Size</th>
+                                <th>Ratings</th>
+                                <th>Discount</th>
+                                <th>Brand Name</th>
+                                <th>Sku</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Tax</th>
+                                <th>Product Id</th>
+                              </tr>
+                            <tr *ngFor="let prod of this.data.result">
+                                <td> {{ prod.id }} </td>
+                                <td> {{ prod.name }} </td>
+                                <td><img src="{{prod.img}}" alt="wrong url" class="img-thumbnail" style="height:100px;width: 100px" /></td>
+                                <td> {{ prod.prodCategory }} </td>
+                                <td> {{ prod.shopCategory }} </td>
+                                <td> {{ prod.shopName }} </td>
+                                <td> {{ prod.longDesc }} </td>
+                                <td> {{ prod.shortDesc }} </td>
+                                <td> {{ prod.size}} </td>
+                                <td> {{ prod.rating }} </td>
+                                <td> {{ prod.discount }} </td>
+                                <td> {{ prod.brandName }} </td>
+                                <td> {{ prod.sku}} </td>
+                                <td> {{ prod.price }} </td>
+                                <td> {{ prod.quantity }} </td>
+                                <td> {{ prod.tax }} </td>
+                                <td> {{ prod.prodId }} </td></tr>
+                            </table> 
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+    
+    

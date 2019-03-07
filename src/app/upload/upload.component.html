@@ -1,0 +1,90 @@
+
+    
+    <h1 style="text-align: center"> PRODUCT DETAILS </h1>
+
+  <form>
+          <table align="center">
+    
+  <br>
+            <tr>
+             <td>Product Name :</td> <td><input type="text"required [(ngModel)]="providerDetails.name" [ngModelOptions]="{standalone: true}"> </td><br>
+            </tr>
+            <tr>
+             <td>Image :</td> <td><input type="text" required [(ngModel)]="providerDetails.img" [ngModelOptions]="{standalone: true}" ></td><br>
+            </tr>
+            <tr>
+            <td>Product Category :  </td>
+             <td>
+            <select name="category" required [(ngModel)]="providerDetails.prodCategory">
+                <option value="mens">Mens</option>
+                <option value="womens">Womens</option>
+                <option value="childrens">Childrens</option>
+                
+              </select>
+            </td>
+              </tr>
+              <tr>
+                  <td>Shop Category</td>
+                    <td>
+                            <select name="category1" required [(ngModel)]="providerDetails.shopCategory">
+                                <option value="textile">Textile</option>
+                                <option value="Sports">Sports</option>
+                                <option value="gifts">Gifts</option>
+                                
+                              </select>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>Select Shop</td>
+                                  <td>
+                                          <select name="categor" required [(ngModel)]="providerDetails.shopName">
+                                              <option value="siva">Siva Textile</option>
+                                              <option value="chennai">Chennai Textile</option>
+                                            </select>
+                                          </td>
+                                          </tr>
+            <tr>
+             <td>Short Description:</td> <td><input type="text"  required [(ngModel)]="providerDetails.shortDesc" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>
+            <tr>
+             <td>Long Description:</td> <td><input type="text"  required [(ngModel)]="providerDetails.longDesc" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>
+            <tr>
+             <td>Size :</td> <td><input type="text" required [(ngModel)]="providerDetails.size" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>
+            <tr>
+            <td>Ratings :</td> <td><input type="number"  required [(ngModel)]="providerDetails.rating" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>
+            <tr>
+             <td>Discount :</td> <td><input type="text" required [(ngModel)]="providerDetails.discount" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>
+            <tr>
+             <td>Brand Name :</td> <td><input type="text" required [(ngModel)]="providerDetails.brandName" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>
+            <tr>
+             <td>Sku :</td> <td><input type="text" required [(ngModel)]="providerDetails.sku" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>
+            
+            <tr>
+                <td>Price :</td> <td><input type="text" required [(ngModel)]="providerDetails.price" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>
+            <tr>
+                <td>Quantity :</td> <td><input type="text" required [(ngModel)]="providerDetails.quantity" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>            
+            <tr>
+             <td>Tax :</td> <td><input type="text" required [(ngModel)]="providerDetails.tax" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>
+             <tr>
+                <td>Product Id :</td> <td><input type="text" required [(ngModel)]="providerDetails.prodId" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr>
+            <!-->
+            <tr>
+                <td>UpdatedAt :</td> <td><input type="text" required [(ngModel)]="providerDetails.updatedAt" [ngModelOptions]="{standalone: true}"></td><br>
+            </tr> -->
+                  </table>
+                  <br>
+                  <div style="text-align: center">
+           <input type="submit"  style="box-align: center" value="Submit" (click)="update()"></div>
+          </form>
+    
+

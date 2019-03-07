@@ -1,0 +1,166 @@
+
+<section class="container py-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Vendor</h2>
+                <ul id="tabsJustified" class="nav nav-tabs">
+                    <li class="nav-item"><a href="" data-target="#add" data-toggle="tab" class="nav-link small text-uppercase active">Add</a></li>
+                    <li class="nav-item"><a href="" data-target="#update" data-toggle="tab" class="nav-link small text-uppercase ">Update</a></li>
+                    <li class="nav-item"><a href="" data-target="#delete" data-toggle="tab" class="nav-link small text-uppercase ">Delete</a></li>
+                    <li class="nav-item"><a href="" data-target="#view" data-toggle="tab" class="nav-link small text-uppercase ">View</a></li>
+                </ul>
+                <br>
+                <div id="tabsJustifiedContent" class="tab-content">
+                    <div id="add" class="tab-pane fade active show">
+                            <div >
+                                <h1 style="text-align: center">Vendor details</h1>
+
+                                    <form  > 
+                                        <table align="center" style="vertical-align: center;" >
+                                        
+                                  
+                                  
+                          <tr>
+                                     <td > 
+                                  
+                                  
+                                  <label>Vendor name:</label></td>
+                                  <td >
+                                  <input type="text" required placeholder="Enter vendor name" [(ngModel)]="vendor.vendorname" [ngModelOptions]="{standalone: true}"></td>
+                                  </tr><br>
+                                  <tr>
+                                   <td> 
+                                  <label>Contact number:</label></td>
+                                  <td ><input type="number" required placeholder="Enter ContactNo" [(ngModel)]="vendor.contactno" [ngModelOptions]="{standalone: true}"></td>
+                                  </tr><br>
+                                  <tr>
+                                    <td> 
+                                   <label>buyer_id:</label></td>
+                                   <td ><input type="number" required placeholder="Enter BuyerId" [(ngModel)]="vendor.buyer_id" [ngModelOptions]="{standalone: true}"></td>
+                                   </tr>
+                                   <br>
+                                  <tr>
+                                  <td ><label>Address:</label></td>
+                                  <td >
+                                  <input type="text" required placeholder="Enter the Address" [(ngModel)]="vendor.address" [ngModelOptions]="{standalone: true}"></td>
+                                  </tr>
+                                  <br>
+                                  <tr>
+                                  <td>
+                                  <label>Email:</label></td>
+                                  <td><input type="text"  required placeholder="Enter email id" [(ngModel)]="vendor.email" [ngModelOptions]="{standalone: true}"></td>
+                                  </tr>
+                                  <br>
+                                  <tr>
+                                      <td>
+                                      <label>Image:</label></td>
+                                      <td><input type="file"  required  [(ngModel)]="vendor.img" [ngModelOptions]="{standalone: true}"></td>
+                                      </tr>
+                                      <br>
+                                      <tr>
+                                          <td>
+                                          <label>VendorId:</label></td>
+                                          <td><input type="number"  required  [(ngModel)]="vendor.vendorId" [ngModelOptions]="{standalone: true}"></td>
+                                    </tr>
+      
+                                  
+                                  </table><br>
+                                  <p style="text-align: center">
+                                  <input class="button" type="button" (click)="insert()" value="insert"><br><br><br>
+
+                                  
+                                  </p> 
+                                  
+                                  </form>
+                                  </div>
+                                  
+                                  
+                            </div>
+                            <div id="update" class="tab-pane fade ">
+                        
+                              <div class="image">
+                                      <h1 style="text-align: center">Update Vendor</h1>
+                                      
+                                        <div class="box"> 
+                                        <div class="container-1"> 
+                                          <input type="search" id="search" placeholder="Search..." [(ngModel)]="searchText"> 
+                                        </div> 
+                                      </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <div style="text-align: center">
+                                        <button  *ngFor="let ld of data.vendor | filter3:searchText" style="width: 50vw;margin-bottom: 10px" ><a routerLink="/upload2/{{ld.id}}">
+                                          {{ld.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{ld.vendorname}}</a>
+                                          <br>
+                                        </button>
+                                        </div>
+                                        <br>
+                                   
+                     
+                  </div>
+              </div>
+              <div id="delete" class="tab-pane fade">
+                      <div class="image">
+                              <h1 style="text-align: center">Delete Shop</h1>
+                              </div> 
+                              <div class="box"> 
+                                <div class="container-1"> 
+                                  <input type="search" id="search" placeholder="Search..." [(ngModel)]="searchText"> 
+                                </div> 
+                              </div>
+                              <!--<input align="middle" type="search"  placeholder="type here to search" >-->
+                              
+                              <br>
+                              <br>
+                              <br>
+                              <br>
+                              <div style="text-align: center">
+                              <button  *ngFor="let ld of data.vendor | filter3:searchText"  style=" width: 50vw;margin-bottom: 10px" (click)="clickMethod(ld)">
+                                {{ld.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{ld.vendorname}}
+                                <br>
+                              </button>
+                              </div>
+                              <br>
+                              </div>
+                    <div id="view" class="tab-pane fade">
+                            <h1>
+                                    Vendor Details
+                                    </h1>
+                                    <div>
+                                    <table  style="width:90%" class="table table-bordered">
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Vendorname</th>
+                                        <th>Contactno</th>
+                                        <th>BuyerId</th>
+                                        <th>Address</th>
+                                        <th>Email</th>
+                                        <th>Image</th>
+                                        <th>VendorId</th>                                        
+                                    </tr>
+                                    <tr *ngFor="let vendor of data.vendor">
+                                        <td> {{ vendor.id }} </td>
+                                        <td> {{ vendor.vendorname }} </td>
+                                        <td> {{ vendor.contactno }} </td>
+                                        <td> {{ vendor.buyer_id }} </td>
+                                        <td> {{vendor.address}} </td>
+                                        <td> {{ vendor.email }} </td>
+                                         <td><img src="{{vendor.img}}" alt="wrong url" class="img-thumbnail" style="height:100px;width: 100px" /></td>
+                                         <td>{{vendor.vendorId}}</td> 
+                                        
+                                  
+                                  
+                                    </tr>
+                                    </table>
+                                    </div>
+                                            </div>
+        </div>
+        </div>
+        </div>
+        
+    
+        </section>
+    
+    

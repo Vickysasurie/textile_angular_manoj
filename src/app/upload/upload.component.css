@@ -1,0 +1,21 @@
+.form{
+    text-align: center;
+    margin-left: 400px;
+}
+.image{
+    height:40em; background-size:cover; width:auto;
+    background-image:url('../../assets/6.jpg');
+    background-position: 50%;
+  }
+  .box { 
+    margin: 20px auto;
+    width: 100%;
+    max-width: 150px;
+    height: 40px; 
+    text-align: center; 
+  }
+  
+  .box .container-1 input{
+     width: 100%;
+  }
+  

@@ -1,0 +1,160 @@
+
+<section class="container py-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Shop</h2>
+                <ul id="tabsJustified" class="nav nav-tabs">
+                    <li class="nav-item"><a href="" data-target="#add" data-toggle="tab" class="nav-link small text-uppercase active">Add</a></li>
+                    <li class="nav-item"><a href="" data-target="#update" data-toggle="tab" class="nav-link small text-uppercase ">Update</a></li>
+                    <li class="nav-item"><a href="" data-target="#delete" data-toggle="tab" class="nav-link small text-uppercase ">Delete</a></li>
+                    <li class="nav-item"><a href="" data-target="#view" data-toggle="tab" class="nav-link small text-uppercase ">View</a></li>
+                </ul>
+                <br>
+                <div id="tabsJustifiedContent" class="tab-content">
+                    <div id="add" class="tab-pane fade active show">
+                            <div >
+                                    <h1 style="text-align: center">Shop Details</h1>
+                                          <form  > 
+                                              <table align="center">
+                                       
+                                    
+                                    
+                                         <tr>
+                                           <td > 
+                                    
+                                    
+                                      <label>Shop name:</label></td>
+                                      <td >
+                                      <input type="text" required placeholder="Enter shop name" [(ngModel)]="shop.shopname" [ngModelOptions]="{standalone: true}"></td>
+                                       </tr><br>
+                                       <tr>
+                                         <td> 
+                                      <label>Contact number:</label></td>
+                                      <td ><input type="number" required placeholder="Enter Contact No" [(ngModel)]="shop.contactno" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+                                     </tr>
+                                     <tr>
+                                      <td ><label>Address:</label></td>
+                                      <td >
+                                      <input type="text" required placeholder="Enter the Address" [(ngModel)]="shop.address" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+                                     </tr>
+                                     <tr>
+                                     <td><label>Lattitude:</label></td>
+                                      <td><input type="number" required placeholder="Enter Latitude" [(ngModel)]="shop.latitude" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label>Longitude:</label></td>
+                                      <td><input type="number" required placeholder="Enter Longitude" [(ngModel)]="shop.longitude" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                      <label>Email:</label></td>
+                                      <td><input type="text" required placeholder="Enter email id" [(ngModel)]="shop.email" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                      <label>LOGO_Image:</label></td>
+                                      <td><input type="text" required placeholder="URL" [(ngModel)]="shop.url" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+                                      </tr>
+                                      <tr>
+                                      <td><label>Shop_Image:</label></td>
+                                      <td>
+                                    <input type="text" required placeholder="URL" [(ngModel)]="shop.url1" [ngModelOptions]="{standalone: true}"><br /><br /></td> 
+                                     </tr>
+                                    </table><br>
+                                    <p style="text-align: center">
+                                    <input class="button" type="button" (click)="insert()" value="insert"><br><br><br>
+                                      
+                                      
+                                    </p> 
+                                    
+                                    </form>
+                                    </div>
+                                    </div>
+                                    <div id="update" class="tab-pane fade ">
+                        
+                                      <div class="image">
+                                              <h1 style="text-align: center">Update Shop</h1>
+                                              
+                                                <div class="box"> 
+                                                <div class="container-1"> 
+                                                  <input type="search" id="search" placeholder="Search..." [(ngModel)]="searchText"> 
+                                                </div> 
+                                              </div>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <div style="text-align: center">
+                                                <button  *ngFor="let ld of data.shop | filter2:searchText" style="width: 50vw;margin-bottom: 10px" ><a routerLink="/upload1/{{ld.id}}">
+                                                  {{ld.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{ld.shopname}}</a>
+                                                  <br>
+                                                </button>
+                                                </div>
+                                                <br>
+                                           
+                             
+                          </div>
+                      </div>
+                      <div id="delete" class="tab-pane fade">
+                              <div class="image">
+                                      <h1 style="text-align: center">Delete Shop</h1>
+                                      </div> 
+                                      <div class="box"> 
+                                        <div class="container-1"> 
+                                          <input type="search" id="search" placeholder="Search..." [(ngModel)]="searchText"> 
+                                        </div> 
+                                      </div>
+                                      <!--<input align="middle" type="search"  placeholder="type here to search" >-->
+                                      
+                                      <br>
+                                      <br>
+                                      <br>
+                                      <br>
+                                      <div style="text-align: center">
+                                      <button  *ngFor="let ld of data.shop | filter2:searchText"  style=" width: 50vw;margin-bottom: 10px" (click)="clickMethod(ld)">
+                                        {{ld.id}}&nbsp;&nbsp;&nbsp;&nbsp;{{ld.shopname}}
+                                        <br>
+                                      </button>
+                                      </div>
+                                      <br>
+                                      </div>
+                     <div id="view" class="tab-pane fade">
+                            <div>
+                                    <table  style="width:90%" class="table table-bordered">
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Shopname</th>
+                                        <th>Contactno</th>
+                                        <th>Address</th>
+                                        <th>Latitude</th>
+                                        <th>Longitude</th>
+                                        <th>Email</th>
+                                        <th>ShopLogo</th>
+                                        <th>ShopImage</th>
+                                    </tr>
+                                    <tr *ngFor="let shop of result">
+                                        <td> {{ shop.id }} </td>
+                                        <td> {{ shop.shopname }} </td>
+                                        <td> {{ shop.contactno }} </td>
+                                        <td> {{ shop.address }} </td>
+                                        <td> {{ shop.latitude }} </td>
+                                        <td> {{ shop.longitude }} </td>
+                                        <td> {{ shop.email }} </td>
+                                        <td> <img src="{{shop.url}}" alt="wrong url" class="img-thumbnail" style="height:100px;width: 100px" /> </td>
+                                        <td><img src="{{shop.url1}}" alt="wrong url" class="img-thumbnail" style="height:100px;width: 100px" /> </td>
+                                  
+                                  
+                                    </tr>
+                                    </table>
+                                    
+                                    </div>   
+                                     </div>
+        </div>
+        </div>
+        </div>
+        
+    
+        </section>
+    
+    

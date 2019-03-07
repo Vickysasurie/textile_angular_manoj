@@ -1,0 +1,62 @@
+
+<div >
+  <h1 style="text-align: center">Vendor details</h1>
+
+      <form  > 
+          <table align="center" >
+          
+    
+    
+     <tr>
+       <td > 
+    
+    
+    <label>Vendor name:</label></td>
+    <td >
+    <input type="text" required  placeholder="Enter vendor name" [(ngModel)]="vendor.vendorname" [ngModelOptions]="{standalone: true}"></td>
+    </tr><br>
+    <tr>
+     <td> 
+    <label>Contact number:</label></td>
+    <td ><input type="number" required placeholder="Enter ContactNo" [(ngModel)]="vendor.contactno" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+    </tr>
+    <tr>
+      <td> 
+     <label>buyer_id:</label></td>
+     <td ><input type="number" required placeholder="Enter BuyerId" [(ngModel)]="vendor.buyer_id" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+     </tr>
+     
+    <tr>
+    <td ><label>Address:</label></td>
+    <td >
+    <input type="text" required placeholder="Enter the Address" [(ngModel)]="vendor.address" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+    </tr>
+    <tr>
+    <td>
+    <label>Email:</label></td>
+    <td><input type="text" required placeholder="Enter email id" [(ngModel)]="vendor.email" [ngModelOptions]="{standalone: true}"><br /><br /></td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+        <label>Image:</label></td>
+        <td><input type="file"  required  [(ngModel)]="vendor.img" [ngModelOptions]="{standalone: true}"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+            <label>VendorId:</label></td>
+            <td><input type="number"  required  [(ngModel)]="vendor.vendorId" [ngModelOptions]="{standalone: true}"></td>
+      </tr>
+    
+    </table><br>
+    <p style="text-align: center">
+    <input class="button" type="button" (click)="update()" value="insert"><br><br><br>
+
+    
+    </p> 
+    
+    </form>
+    </div>
+    
+    
